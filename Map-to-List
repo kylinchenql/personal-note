@@ -1,0 +1,2 @@
+Map<String, Hotel> hotels = hotelList.stream().collect(Collectors.toMap(c -> c.getUuid(), c-> c));
+Map<String, Hotel> hotels = hotelList.stream().collect(Collectors.toMap(Hotel::getUuid, c-> c));
