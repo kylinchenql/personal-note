@@ -1,0 +1,14 @@
+	git add file
+git reset head  
+	cancel all add file
+git stash a
+	place current code away to a
+git stash pop
+	git stash file back
+git rebase branch
+	rebuild branch base
+	when conflict
+		fix it (add file)
+	and then 
+git rebase —continue
+git rebase —abort
