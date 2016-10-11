@@ -5,3 +5,9 @@ Map<String, Hotel> hotels = hotelList.stream().collect(Collectors.toMap(Hotel::g
 group by 
 List<RoomTypes> roomTypes = roomTypesService.findRoomTypesByHotelUuids(hotelUuids);
 Map<String, List<RoomTypes>> roomTypesMap = roomTypes.stream().collect(Collectors.groupingBy(RoomTypes::getHotelUuid));
+
+sort
+List<Type> types = countByType.entrySet().stream()
+        .sorted(Comparator.comparing(Map.Entry::getValue))
+        .map(Map.Entry::getKey)
+        .collect(Collectors.toList());
